@@ -7,7 +7,9 @@
     "lint": "eslint src",
     "dev": "nodemon --exec 'babel-node server/index'",
     "test": "npm run lint",
-    "start": "nf start"
+    "start": "nf start",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "keywords": [],
   "author": "",
@@ -42,10 +44,12 @@
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.4",
     "react-router-dom": "^4.1.1",
-    "react-scripts": "^0.9.5",
+    "react-scripts": "^5.0.0",
     "redux": "^3.6.0",
     "redux-thunk": "^2.2.0",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "@snyk/protect": "latest"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "http://localhost:3001",
+  "snyk": true
 }
